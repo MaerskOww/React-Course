@@ -3,7 +3,7 @@ import { TodoList, TodoAdd, todoReducer } from './components';
 
 export const TodoApp = () => {
 
-    const { todos, todosCount, pendingTodosCount, handleNewTodo, handleRemoveTodo, handleToggleTodo, } = useTodo();
+    const { todos, todosCount, pendingTodosCount, handleNewTodo, handleRemoveTodo, handleToggleTodo } = useTodo();
 
     return (
         <>
