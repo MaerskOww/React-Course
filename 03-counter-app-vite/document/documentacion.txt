@@ -1,0 +1,41 @@
+https://vitejs.dev/guide/#scaffolding-your-first-vite-project
+yarn create vite
+
+https://es.reactjs.org/docs/events.html
+
+https://es.reactjs.org/docs/hooks-intro.html
+
+****************PRUEBAS****************
+https://jestjs.io/
+
+https://testing-library.com/
+
+yarn add --dev jest
+"test": "jest --watchAll"
+yarn add -D @types/jest
+yarn add --dev babel-jest @babel/core @babel/preset-env
+
+yarn add --dev @testing-library/react
+
+Crear archivo babel.config.js en el root y luego insertar config
+module.exports = {
+    presets: [
+        ['@babel/preset-env', { targets: { esmodules: true}}],
+        ['@babel/preset-react', { runtime: 'automatic'}],
+    ]
+};
+
+yarn add -D @babel/preset-react
+
+Crear archivo jest.config.js
+module.exports = {
+    testEnvironment: 'jest-environment-jsdom',
+    setupFiles: ['./jest.setup.js']
+}
+
+yarn add -D jest-environment-jsdom
+
+
+Crear archivo jest.setup.js
+yarn add -D whatwg-fetch
+import 'whatwg-fetch';

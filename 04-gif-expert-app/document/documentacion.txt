@@ -1,0 +1,49 @@
+*****Estructura de archivos / FileSystem del proyecto*****
+https://es.reactjs.org/docs/faq-structure.html
+https://hackernoon.com/structuring-projects-and-naming-components-in-react-1261b6e18d76
+
+*****Docs*****
+https://reactjs.org/docs/strict-mode.html
+
+https://www.npmjs.com/package/http-server
+http-server -o
+
+https://app.netlify.com/teams/maerskoww/overview
+
+
+*****Información del github*****
+git init
+git add .
+git commit -m "Primer commit"
+git checkout -- .
+
+https://docs.github.com/en/enterprise/2.13/user/articles/setting-your-username-in-git
+
+*****Pruebas unitarias con jest*****
+https://gist.github.com/Klerith/ca7e57fae3c9ab92ad08baadc6c26177
+yarn add --dev jest babel-jest @babel/preset-env @babel/preset-react 
+yarn add --dev @testing-library/react @types/jest jest-environment-jsdom
+yarn add --dev whatwg-fetch
+
+agregar debajo de "preview" en scripts del package.json
+"test": "jest --watchAll"
+
+crear el babel.config.js y agregar lo sig:
+module.exports = {
+    presets: [
+        [ '@babel/preset-env', { targets: { esmodules: true } } ],
+        [ '@babel/preset-react', { runtime: 'automatic' } ],
+    ],
+};
+
+crear Jest config y setup:
+en config:
+module.exports = {
+    testEnvironment: 'jest-environment-jsdom',
+    setupFiles: ['./jest.setup.js']
+}
+en setup:
+// En caso de necesitar la implementación del FetchAPI
+import 'whatwg-fetch'; // <-- yarn add whatwg-fetch
+
+https://react-hooks-testing-library.com/
