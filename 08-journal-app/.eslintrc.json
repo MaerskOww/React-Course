@@ -11,10 +11,7 @@
   "settings": {
     "import/resolver": {
       "node": {
-        "extensions": [
-          ".js",
-          ".jsx"
-        ]
+        "extensions": [".js", ".jsx"]
       }
     }
   },
@@ -64,9 +61,14 @@
         "newlines-between": "always"
       }
     ],
-    "import/no-unresolved": ["error", {
-      "caseSensitive": false
-    }]
+    "import/no-unresolved": [
+      "error",
+      {
+        "caseSensitive": false
+      }
+    ],
+    "spaced-comment": ["error", "always", { "markers": ["/"] }],
+    "no-extra-boolean-cast": "off"
   },
   "ignorePatterns": ["build", "node_modules"]
 }
