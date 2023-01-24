@@ -1,5 +1,6 @@
 import React from 'react';
 
+import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
 import {
   Box,
@@ -46,4 +47,8 @@ export const SideBar = ({ drawerWidth = 240 }) => {
       </Drawer>
     </Box>
   );
+};
+
+SideBar.propTypes = {
+  drawerWidth: PropTypes.number
 };

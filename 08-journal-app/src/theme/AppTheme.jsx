@@ -1,7 +1,7 @@
 import React from 'react';
 
+import PropTypes from 'prop-types';
 import { ThemeProvider } from '@emotion/react';
-// eslint-disable-next-line sort-imports
 import { CssBaseline } from '@mui/material';
 
 import { purpleTheme } from './';
@@ -13,4 +13,8 @@ export const AppTheme = ({ children }) => {
       {children}
     </ThemeProvider>
   );
+};
+
+AppTheme.propTypes = {
+  children: PropTypes.any
 };

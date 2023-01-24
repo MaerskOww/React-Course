@@ -3,7 +3,7 @@ import React from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 
 import { AuthRoutes } from '../auth/routes/AuthRoutes';
-import { Journalroutes } from '../journal/routes/Journalroutes';
+import { Journalroutes } from '../journal/routes/JournalRoutes';
 import { CheckingAuth } from '../ui/';
 import { useCheckAuth } from '../hooks';
 
