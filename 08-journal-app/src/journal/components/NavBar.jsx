@@ -1,5 +1,6 @@
 import React from 'react';
 
+import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { AppBar, Grid, IconButton, Toolbar, Typography } from '@mui/material';
 import { LogoutOutlined, MenuOutlined } from '@mui/icons-material';
@@ -47,4 +48,8 @@ export const NavBar = ({ drawerWidth = 240 }) => {
       </Toolbar>
     </AppBar>
   );
+};
+
+NavBar.propTypes = {
+  drawerWidth: PropTypes.number
 };
